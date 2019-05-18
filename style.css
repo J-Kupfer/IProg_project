@@ -1,0 +1,77 @@
+.welcomePage{  
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-style: italic;
+  background-image: url("village2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+  background-position: center;
+}
+
+.loginPage{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: aliceblue;
+  background-image: url("background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+  background-position: center;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.loginPage h1{
+  color: azure;
+  text-decoration: underline;
+}
+
+.loginPage label{
+  color: azure;
+}
+
+.loginPage input {
+  background-color: honeydew;
+  color: white;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{  
+  border-right: 1px solid ghostwhite;  
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #111;
+}
+
+a{
+  display: block;
+  padding: 5px;
+}
+
+.active{
+   background-color: lightgreen;
+}
+

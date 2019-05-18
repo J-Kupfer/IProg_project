@@ -1,0 +1,30 @@
+{
+  "name": "IProg_project",
+  "version": "1.0.0",
+  "description": "- Feature Liste:     - [ ] Login Seite         - [ ] Willkommen message + Seiten styling (Logo)         - [ ] (Neuer Account erstellen)         - [ ] Einloggmaske             - [ ] Passwort resetten         - [ ] Background track?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Kupfer/IProg_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-Kupfer/IProg_project/issues"
+  },
+  "homepage": "https://github.com/J-Kupfer/IProg_project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}

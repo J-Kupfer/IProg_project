@@ -4,6 +4,8 @@
 
 .nav-link {
     font-family: 'Rye', cursive; 
+    color: white;  
+    
 }
 
 .display-4 {
@@ -12,5 +14,9 @@
 
 .lead {
     font-family: 'Rye', cursive;
+}
+
+.mastfoot {
+    text-align: center;
 }
 

@@ -1,0 +1,17 @@
+body{
+    background-image: url("leader1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+       
+}
+
+.table{
+    margin-top: 57px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 20%;
+}
+
+th{
+    color: yellow;
+}

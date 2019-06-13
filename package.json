@@ -28,6 +28,7 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.5.15",
+    "nodemon": "^1.19.1",
     "popper.js": "^1.15.0"
   }
 }

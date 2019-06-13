@@ -1,0 +1,35 @@
+.pageTitle {
+    font-family: 'Rye', cursive;
+}
+
+.nav-link {
+    font-family: 'Rye', cursive; 
+    color: white;  
+    
+}
+
+.display-4 {
+    font-family: 'Rye', cursive;
+}
+
+.lead {
+    font-family: 'Rye', cursive;
+}
+
+.mastfoot {
+    text-align: center;
+}
+
+.card-body {
+    background-color: whitesmoke;
+}
+
+.mainBody  {
+    background-image: url("./../assets/wildwestback.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+html { 
+    scroll-behavior: smooth;
+} 

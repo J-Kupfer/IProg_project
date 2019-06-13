@@ -4,7 +4,7 @@
   "description": "- Feature Liste:     - [ ] Login Seite         - [ ] Willkommen message + Seiten styling (Logo)         - [ ] (Neuer Account erstellen)         - [ ] Einloggmaske             - [ ] Passwort resetten         - [ ] Background track?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,11 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
+    "ejs": "^2.6.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.5.15",
+    "nodejs": "0.0.0",
     "nodemon": "^1.19.1",
     "popper.js": "^1.15.0"
   }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Bootstrap 4 Layout</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" type="text/css" href="css/indexCSS.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet"> 
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+
+    <body class="mainBody">       
+        <div class="container">
+            <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: whitesmoke" >
+                <a class="navbar-brand" href="#">
+                    <img src="assets/man-311670.svg" width="30" height="30" alt="Cooles logo"> 
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bountyboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Leaderboard</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#login-card">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="jumbotron">
+                <h1 class="display-4">Wild. Wild. West.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat, nisi eget euismod tincidunt, elit est volutpat lectus, ut dignissim tellus mauris nec urna. Vestibulum non pulvinar dui, nec scelerisque ligula. Quisque quis imperdiet lectus. Cras nec consequat libero, et convallis risus. Fusce dictum a mi a convallis. Mauris rutrum sodales ipsum suscipit iaculis. Mauris finibus cursus dui sit amet hendrerit. Morbi imperdiet elit sit amet euismod interdum. Morbi pretium nec leo sit amet tincidunt. Proin et ante in leo elementum dictum.
+
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sodales diam quam, at luctus nulla porta eget. Vivamus commodo sem nec lectus ultrices pellentesque. Vestibulum venenatis at odio maximus sollicitudin. Phasellus blandit, sem sed fringilla dignissim, lacus ipsum rhoncus sapien, ut laoreet magna magna a arcu. Donec pellentesque bibendum molestie. Phasellus dapibus nisi sed gravida aliquet.
+                        
+                        Vestibulum fermentum et arcu eu vestibulum. Nulla non ligula id quam malesuada fringilla vel quis nisl. Suspendisse pretium sit amet quam sit amet pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In ullamcorper, neque a iaculis ullamcorper, arcu arcu congue ex, ut commodo tellus odio sit amet nisi. Praesent tincidunt arcu dui, ut sodales neque vestibulum id. Vivamus imperdiet faucibus leo. Pellentesque quis tincidunt lacus. Donec lectus nisi, consectetur et consectetur vitae, convallis sed enim. Nunc dolor nulla, consequat non dictum at, scelerisque aliquet augue. Quisque leo risus, vulputate nec purus sit amet, efficitur laoreet velit. Nunc finibus varius nibh gravida cursus. Vestibulum viverra in eros non faucibus. Donec libero orci, semper in condimentum quis, pretium hendrerit leo. Aenean feugiat nec enim eget tristique.
+                        
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ullamcorper sodales eros. Sed nec dui efficitur, feugiat velit quis, molestie leo. Proin eget vestibulum risus. Pellentesque libero purus, lacinia ac velit non, euismod imperdiet sapien. Vivamus faucibus urna ac tortor facilisis molestie. Integer vitae consequat justo, a suscipit sapien. Nulla ac risus dignissim, gravida felis at, tristique diam. Etiam bibendum, arcu ut eleifend congue, lacus risus malesuada dui, sit amet tempus felis tortor a metus. Mauris vitae eleifend nunc, quis lobortis sem. Etiam rutrum eros lectus, id egestas metus ullamcorper egestas. Donec in rutrum libero. Nunc ornare nisl posuere nisi hendrerit ultricies. In ac nisi at magna consequat sollicitudin convallis ullamcorper ipsum. In vitae auctor arcu.
+                        
+ 
+                    </p>
+                <p class="btn btn-primary btn-lg" href="#" role="button">Learn more</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                   
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div id="login-card" class="card-body text-center">
+                            <form class="form-signin">
+                                    <img class="mb-4" src="assets/man-311670.svg" alt="" width="72" height="72">
+                                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                                    <label class="sr-only" for="inputEmail">Username</label>
+                                    <input class="form-control" required="" autofocus="" placeholder="Username">
+                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" value="remeber-me">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                    <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>            
+        </div>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>
+                    Made with 
+                    <a href="https://getbootstrap.com/">Bootstrap</a> 
+                    , by 
+                    <a href="https://steamcommunity.com/groups/despacitogang"> Despacito Gang</a>
+                    .
+                </p>
+            </div>
+        </footer>
+        
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

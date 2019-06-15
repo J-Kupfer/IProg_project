@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 path = require('path');
 //Enable css folder to use
+app.use( express.static("public") );
 app.use(express.static(__dirname + './views/css'));
 //View enginge to render .ejs
 app.set('views', path.join(__dirname, 'views'));
@@ -14,14 +15,7 @@ mongoose.connect('mongodb+srv://admin:adminPassword@cluster0-mf5vb.mongodb.net/t
                     console.log('Verbindung hergestellt!');
                 });
 //ROUTES
-app.get('/', (req,res) =>{
-    res.send('HelloWorld');
-});
-app.get('/Home', (req, res) =>{
-    res.send('We are on Home');
-});
-
-app.get('/index', function(req, res) {
+app.get('/', function(req, res) {
     res.render('index');
   });
   

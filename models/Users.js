@@ -1,21 +1,18 @@
 const mongoose = require ('mongoose');
-const IDNumber = 0;
-const UserID = u;
-const BountyID = b;
 
 const UserSchema = new mongoose.Schema({
     name:{
         type: String,
-        required: True
+        required: false
     },
     password:{
         type: String,
-        required: True
+        required: false
     },
     
     date:{
         type: Date,
-        required: True,
+        required: true,
         default: Date.now
     }/*,
     id: {
@@ -27,6 +24,5 @@ const UserSchema = new mongoose.Schema({
     
 });
 
-const User = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
 
-module.exports = User;

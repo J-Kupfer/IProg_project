@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const expressLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 path = require('path');
@@ -9,7 +10,8 @@ app.use( express.static("public") );
 app.use(express.static(__dirname + './views/css'));
 
 //Bodyparser 
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json());
 //View enginge to render .ejs
 app.set(expressLayouts);
 app.set('view engine', 'ejs');

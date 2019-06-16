@@ -2,7 +2,7 @@
   "name": "IProg_project",
   "version": "1.0.0",
   "description": "- Feature Liste:     - [ ] Login Seite         - [ ] Willkommen message + Seiten styling (Logo)         - [ ] (Neuer Account erstellen)         - [ ] Einloggmaske             - [ ] Passwort resetten         - [ ] Background track?",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
@@ -24,13 +24,17 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "connect-flash": "^0.1.1",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
     "jquery": "^3.4.1",
     "mongoose": "^5.5.15",
     "nodejs": "0.0.0",
     "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "popper.js": "^1.15.0"
   }
 }

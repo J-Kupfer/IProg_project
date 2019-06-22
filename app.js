@@ -12,6 +12,7 @@ const session = require('express-session');
 
 
 
+
 //Passport config
 require('./config/passport')(passport);
 //Connect to MongoDB

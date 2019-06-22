@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/Users');
 const passport = require('passport');
+
 router.get('/login', (req,res) => res.send('Login'));
 router.get('/register', (req,res) => res.send('Register'));
 
@@ -24,16 +25,14 @@ router.post('/register', async (req, res) => {
     
 });
 //Login Handle
-router.post('/login', (req,res, next) =>{
-    passport.authenticate('local', {
+router.post('/login', passport.authenticate('local',{
         successRedirect: '/bountyboard',
         failureRedirect: '/fail',
         failureFlash: true
-    })(req,res,next);
-})
+}));
 
 
-const User = require('./../models/Users');
+
 
 router.get('/getall', (req,res) => {
     User.find({}, function(err, docs) {

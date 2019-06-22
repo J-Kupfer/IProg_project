@@ -101,12 +101,12 @@ html {
                 <div class="col">
                     <div class="card">
                         <div id="login-card" class="card-body text-center">
-                            <form class="form-signin">
+                            <form action="/users/login" method="POST" class="form-signin">
                                     <img class="mb-4" src="man-311670.svg" alt="" width="72" height="72">
                                     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                                    <label class="sr-only" for="inputEmail">Username</label>
-                                    <input class="form-control" required="" autofocus="" placeholder="Username">
-                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                                    <label class="sr-only" for="inputUsername">Username</label>
+                                    <input type="inputUsername" id="inputUsername" name="inputUsername" class="form-control" required="" autofocus="" placeholder="Username">
+                                    <input type="inputPassword" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required="">
                                     <div class="checkbox mb-3">
                                         <label>
                                             <input type="checkbox" value="remeber-me">

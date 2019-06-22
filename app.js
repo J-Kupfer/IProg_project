@@ -5,22 +5,50 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 path = require('path');
-//Enable css folder to use
-app.use( express.static("public") );
-app.use(express.static(__dirname + './views/css'));
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
 
-//Bodyparser 
-app.use(express.urlencoded({extended: false}));
-app.use(bodyParser.json());
-//View enginge to render .ejs
-app.set(expressLayouts);
-app.set('view engine', 'ejs');
+
+
+
+//Passport config
+require('./config/passport')(passport);
 //Connect to MongoDB
 mongoose.connect('mongodb+srv://admin:adminPassword@cluster0-mf5vb.mongodb.net/test?retryWrites=true&w=majority',
                 { useNewUrlParser: true },
                 () => {
                     console.log('Verbindung hergestellt!');
                 });
+//View enginge to render .ejs
+app.set(expressLayouts);
+app.set('view engine', 'ejs');
+//Bodyparser 
+app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.json());
+// Express session
+app.use(
+    session({
+      secret: 'secret',
+      resave: true,
+      saveUninitialized: true
+    })
+);
+//Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+//Connect to flash
+app.use(flash());
+// Globale variablen 
+app.use(function(req, res, next) {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
+//Enable css folder to use
+app.use( express.static("public") );
+app.use(express.static(__dirname + './views/css'));
 //ROUTES
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));

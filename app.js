@@ -8,6 +8,7 @@ path = require('path');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+require('dotenv/config');
 
 
 
@@ -16,7 +17,7 @@ const session = require('express-session');
 //Passport config
 require('./config/passport')(passport);
 //Connect to MongoDB
-mongoose.connect('mongodb+srv://admin:adminPassword@cluster0-mf5vb.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(process.env.DB_CONNECT,
                 { useNewUrlParser: true },
                 () => {
                     console.log('Verbindung hergestellt!');

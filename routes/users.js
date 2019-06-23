@@ -21,18 +21,20 @@ router.post('/register', async (req, res) => {
     } catch (err) {
         res.json({message: err})
     }
-    
-    
+        
 });
 //Login Handle
 router.post('/login', passport.authenticate('local',{
         successRedirect: '/bountyboard',
-        failureRedirect: '/fail',
+        failureRedirect: '/',
         failureFlash: true
 }));
 
-
-
+//Logout handle
+router.get('/logout', (req,res) =>{
+    req.logout();
+    res.redirect('/');
+});
 
 router.get('/getall', (req,res) => {
     User.find({}, function(err, docs) {

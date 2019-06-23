@@ -35,13 +35,16 @@ router.get('/logout', (req,res) =>{
     req.logout();
     res.redirect('/');
 });
-
+const User = require('./../models/Posts');
 router.get('/getall', (req,res) => {
-    User.find({}, function(err, docs) {
-        if (!err){ 
-            console.log(docs);
-            process.exit();
-        } else {throw err;}
-    });
-})
+    //Where User is you mongoose user model
+    User.find({} , (err, users) => {
+        if(err) //do something...
+            console.log(err);
+        users.map(user => {
+            //Do somethign with the user
+            console.log(user);
+        })
+    })
+});
 module.exports = router;

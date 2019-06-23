@@ -56,5 +56,6 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/bountyboard', require('./routes/bountyboard'));
 app.use('/leaderboard', require('./routes/leaderboard'));
+app.use('/createBounty', require('./routes/createBounty'));
 //Server hört auf Port 3000  //localhost:3000
 app.listen(3000, console.log('Server gestartet auf Port ' + PORT));

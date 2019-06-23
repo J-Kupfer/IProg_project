@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
+    
     <style>
+.card{
+    background-image: url("https://media.istockphoto.com/photos/wanted-poster-picture-id98328646?k=6&m=98328646&s=612x612&w=0&h=b02OeIHx_lH77h4JSjO41SrggiAnFb4tyyteVUt9IFU=%22");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
  .container{
     max-width: 960px;
     width: 100%;
@@ -118,13 +124,53 @@ img{
     line-height: 1.2;
     margin-top: 0;
 }
+.card-body {
+  /* The image used */
+  background-image: url("http://guatemalago.com/wp-content/uploads/2018/05/Wanted-Poster-Background-Online-Calendar-Templates-Gorgeous-Wanted-Poster-Powerpoint.jpeg");
+  /* Full height */
+  height: 100%;
 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.form-control {
+    margin-top: 1%;
+}
+
+.btn{
+    margin-top: 10%;
+}
+
+
+.nav-item {
+    font-family: 'Rye', cursive;
+}
+
+.label {
+    font-family: 'Rye', cursive;
+    margin-top: 10%;
+}
+
+.wantedTitle {
+    font-family: 'Rye', cursive;
+
+}
 
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> 
-    <script src="createBounty.js"></script>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet"> 
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="createBounty.js"></script>
     
 </head>
+
 <body class="bg-light">
         <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: whitesmoke" >
                 <a class="navbar-brand" href="#">
@@ -138,13 +184,13 @@ img{
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/index.html">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/BountyBoard2.html">Bountyboard</a>
+                            <a class="nav-link" href="/bountyboard">Bountyboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/LeaderBoard.html">Leaderboard</a>
+                            <a class="nav-link" href="/leaderboard">Leaderboard</a>
                         </li>
                     </ul>                    
                 </div>
@@ -157,14 +203,25 @@ img{
                         <div class="card">
                             <div id="login-card" class="card-body text-center">
                                 <form action="/createBounty/createNew" method="POST" class="form-signin">
+                                        <h1 class="wantedTitle"><strong>Wanted</strong></h1>
                                         <img class="mb-4" src="man-311670.svg" alt="" width="72" height="72">
-                                        <h1 class="h3 mb-3 font-weight-normal">Wanted</h1>
-                                        <label class="sr-only" for="inputUsername">Username</label>
-                                        <input type="inputSurname" id="inputSurname" name="surname" class="form-control" required="" autofocus="" placeholder="Vorname">
-                                        <input type="inputName" id="inputName" name="name" class="form-control" required="" autofocus="" placeholder="Nachname">
-                                        <input type="inputNickname" id="inputNickname" name="nickname" class="form-control" required="" autofocus="" placeholder="Spitzname">
-                                        <input type="inputBounty" id="inputBounty" name="bounty" class="form-control" placeholder="Kopfgeld" required="">
-                                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                        <div>
+                                            <label class="label" for="inputName">Name:</label>
+                                            <input type="inputName" id="inputName" name="name" class="form-control" required="" autofocus="" placeholder="Name">
+                                        </div>
+                                        <div class="div">
+                                            <label class="label" for="inputNickname">Spitzname:</label>
+                                            <input type="inputNickname" id="inputNickname" name="nickname" class="form-control" required="" autofocus="" placeholder="Spitzename">
+                                        </div>
+                                        <div class="div">
+                                            <label class="label" for="inputBounty">Kopfgeld:</label>    
+                                            <input type="inputBounty" id="inputBounty" name="bounty" class="form-control" required="" autofocus="" placeholder="Kopfgeld">
+                                        </div>
+                                        <div class="div">
+                                            <label class="label" for="inputCrime">Verbrechen:</label>
+                                            <input type="inputCrime" id="inputCrime" name="crime" class="form-control" placeholder="Verbrechen" required="">
+                                        </div>
+                                        <button class="btn btn-danger btn-lg btn-primary btn-block" type="submit">Erstellen</button>
                                 </form>
                             </div>
                         </div>

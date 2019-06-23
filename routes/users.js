@@ -23,6 +23,7 @@ router.post('/register', async (req, res) => {
     }
         
 });
+
 //Login Handle
 router.post('/login', passport.authenticate('local',{
         successRedirect: '/bountyboard',

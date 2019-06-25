@@ -28,34 +28,41 @@
 
     
     </style>
-    <link href="SteckbriefView.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> 
     
 </head>
 <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: whitesmoke" >
-                <a class="navbar-brand" href="#">
-                    <img src="man-311670.svg" width="30" height="30" alt="Cooles logo"> 
-                </a>
+    <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: whitesmoke" >
+        <a class="navbar-brand" href="#">
+            <img src="man-311670.svg" width="30" height="30" alt="Cooles logo"> 
+        </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/BountyBoard2.html">Bountyboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="file:///C:/Users/GaBab/Documents/IProgProject/IProg_project/LeaderBoard.html">Leaderboard</a>
-                        </li>
-                    </ul>                    
-                </div>
-            </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bountyboard">Bountyboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/leaderboard">Leaderboard</a>
+                </li>
+            </ul> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"><%= user %></a>
+                </li>
+                <li class="nav-item">
+                    <input type="submit" value="Logout"/>
+                </li>
+            </ul>              
+        </div>
+    </nav>
             
     <img src="Gringo2.jpg" class="img-thumbnail" alt="Bla"> 
     <font color="white">

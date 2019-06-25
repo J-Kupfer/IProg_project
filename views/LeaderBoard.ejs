@@ -19,9 +19,14 @@
 th{
     color: yellow;
 }
+
+.nav-item {
+    font-family: 'Rye', cursive;
+}
     
     
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
     <link href="LeaderBoard.css" rel="stylesheet">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous"> 
 </head>
@@ -47,7 +52,10 @@ th{
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link"><%= user %></a>
+                    <a class="nav-link"></a>
+                </li>
+                <li class="nav-item">
+                    <input type="submit" value="Logout"/>
                 </li>
             </ul>                     
         </div>
@@ -64,16 +72,13 @@ th{
             </h3>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>JulianTheBrave</td>
-                <td>52000$</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Alex</td>
-                <td>40000$</td>
-            </tr>
+            <% items.forEach(function(s) { %>
+                <tr>
+                    <td></td>
+                    <td><%= s.name %></td>
+                    <td><%= s.bounty %></td>
+                    <% }); %>
+               </tr>
         </tbody>
     </table>
     </font>  

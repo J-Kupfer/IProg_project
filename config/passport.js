@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose');
 const passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcryptjs');
 
 
 //User Model laden
@@ -14,7 +15,18 @@ module.exports = function(passport) {
             if (!user) {
                 return done(null, false, { message: 'That email is not registered' });
             } 
-            
+            //Match encrypted password
+            bcrypt.compare(password, user.password, (err, isMatch) => {
+                if (err) {
+                    console.log(err);
+                }
+                if (isMatch){
+                    return done (null, user);
+                } else {
+                    return done (null, false, { message: 'Password incorrect'});
+                }
+            })
+            /*
             // Match password
             User.findOne({password: password}).then(user =>{
                 if(password) {
@@ -23,6 +35,7 @@ module.exports = function(passport) {
                     return done(null,false, {message: 'Inkorrektes Passwort'});
                 }
             });
+            */
           });
         })
     );

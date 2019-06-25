@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/Users');
 const passport = require('passport');
+const bcrypt = require('bcryptjs');
 
 router.get('/login', (req,res) => res.send('Login'));
 router.get('/register', (req,res) => res.send('Register'));
@@ -13,14 +14,21 @@ router.post('/register', async (req, res) => {
         name: req.body.name,
         password: req.body.password,
     });
-    
-    try {
-        console.log(req.body);
-        const savedPost = await post.save()
-        res.json(savedPost);
-    } catch (err) {
-        res.json({message: err})
-    }
+    //Hash password
+    bcrypt.genSalt(10, (err, salt) => bcrypt.hash(req.body.password, salt, async (err, hash) => {
+        if (err) {
+            console.log(err);
+        };
+        //Set password
+        post.password = hash;
+        try {
+            console.log(req.body);
+            const savedPost = await post.save()
+            res.json(savedPost);
+        } catch (err) {
+            res.json({message: err})
+        }
+    }))
         
 });
 

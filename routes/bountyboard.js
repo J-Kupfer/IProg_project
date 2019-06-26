@@ -5,7 +5,8 @@ const Post = require('../models/Posts');
 const mongoose = require('mongoose');
 
 router.get('/', ensureAuthenticated, 
-        function(req, res, next) {Post.find().then(function(doc) {res.render('BountyBoard', {items: doc});});}
+        function(req, res, next) {
+                Post.find().then(function(doc) {res.render('BountyBoard', {items: doc});});}
 );
 
 //erhalten der Daten von MongoDB und freigeben

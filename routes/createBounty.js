@@ -17,8 +17,8 @@ router.post('/createNew', async (req, res) => {
         crime: req.body.crime,
         bounty: req.body.bounty
     });
-    res.redirect('/bountyboard');
     try {
+        res.redirect('/bountyboard');
         console.log(req.body);
         const savedPost = await post.save()
         res.json(savedPost);
